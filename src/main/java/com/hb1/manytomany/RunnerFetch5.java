@@ -40,9 +40,21 @@ public class RunnerFetch5 {
         book.getStudents().forEach(System.out::println);
         */
 
+        /*
         String hql2 = "FROM Student5 s WHERE s.name = 'John Coffee'";
         student = (Student5) session.createQuery(hql2).getSingleResult();
         student.getBookList().forEach(t-> System.out.println(t));
+        */
+
+        /*
+        String hql3 = "SELECT s.name FROM Student5 s";
+        List<Object []> resultList = session.createQuery(hql3).list();
+        resultList.forEach(System.out::println);
+        */
+
+        String hql4 = "SELECT s.name FROM Student5 s INNER JOIN FETCH Book5 b ON s.id = 1001";
+        List resultList = session.createQuery(hql4).getResultList();
+        resultList.stream().forEach(System.out::println);
 
 
 
