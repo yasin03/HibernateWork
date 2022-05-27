@@ -1,6 +1,5 @@
 package com.hb1.manytomany;
 
-import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;

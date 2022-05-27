@@ -68,12 +68,9 @@ public class RunnerFetch5 {
         */
 
 
-
         tx.commit();
         sf.close();
         session.close();
-
-
 
 
 

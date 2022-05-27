@@ -1,5 +1,6 @@
 package com.hb1.manytomany;
 
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -48,6 +49,13 @@ public class RunnerSave5 {
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
 
+
+
+
+
+
+
+
         session.save(student1);
         session.save(student2);
         session.save(student3);
@@ -58,5 +66,7 @@ public class RunnerSave5 {
         tx.commit();
         sf.close();
         session.close();
+
+
     }
 }
