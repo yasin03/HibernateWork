@@ -9,25 +9,39 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <hibernate.version>5.6.8.Final</hibernate.version>
+        <mysql.connector.version>8.0.27</mysql.connector.version>
+        <ehcache.version>3.6.3</ehcache.version>
     </properties>
+
     <dependencies>
 
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.6.8.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.29</version>
+            <version>${mysql.connector.version}</version>
         </dependency>
 
-    </dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jcache</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
 </project>
